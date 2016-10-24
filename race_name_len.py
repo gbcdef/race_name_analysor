@@ -27,8 +27,8 @@ bins = np.arange(1,max(data),1)
 fig, ax = plt.subplots() 
 plt.xlim([0, max(data)+5])
 plt.hist(data, bins=bins, alpha=0.5)
-plt.title('histogram of race names\' length')
-plt.xlabel('length')
+plt.title('histogram of race names\' length at iranshao.com')
+plt.xlabel('race name length')
 plt.ylabel('count')
 
 
