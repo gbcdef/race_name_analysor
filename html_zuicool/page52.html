@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="csrf-param" content="_csrf-frontend">
+    <meta name="csrf-token" content="M0hxMF9ZNGdnMghvEhUMLGsDG0cxDEZSdXgGdBYQAgEGBRBcDg1EDA==">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/favicon-144.png" sizes="144x144">
+    <meta name="msapplication-TileImage" content="/images/favicon-144.png">
+    <meta name="msapplication-square70x70logo" content="/images/favicon-310.png"/>
+    <meta name="msapplication-square150x150logo" content="/images/favicon-310.png"/>
+    <meta name="msapplication-square310x310logo" content="/images/favicon-310.png"/>
+
+        <title>赛事大全</title>
+    
+    <link href="/bootstrap/dist/css/bootstrap.min.css?_v=3.1" rel="stylesheet">
+<link href="//cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"></head>
+<body>
+
+<div class="navbar navbar-default" id="navbar">
+<div class="container">
+    <div class="navbar-header-right collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+                        <li>
+                <a class="signin" href="http://zuicool.com/sso/signin?_returnUrl=http%3A%2F%2Fzuicool.com%2Fevents%3Fpage%3D52%26per-page%3D15"
+                >登录</a>
+            </li>
+            <!--
+            <li>
+                <a class="search" href="javascript: return false;"
+                    data-toggle="collapse" data-target="#navbarSearch" data-parent="#navbar">
+                    <span class="glyphicon glyphicon-search"></span>
+                </a>
+            </li>
+-->
+        </ul>
+    </div>
+
+    <div class="navbar-header dropdown">
+
+            <button type="button" class="navbar-toggle dropdown-toggle" type="button" data-toggle="dropdown">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-text">导航</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="http://zuicool.com/events">赛事大全</a></li>
+                <li><a href="http://reg.zuicool.com/">一键报名</a></li>
+                <li><a href="http://zuicool.com/results">成绩查询</a></li>
+                <li><a href="http://zuicool.com/news">资讯</a></li>
+                <li role="separator" class="divider"></li>
+                                <li><a href="http://zuicool.com/sso/signin?_returnUrl=http%3A%2F%2Fzuicool.com%2Fevents%3Fpage%3D52%26per-page%3D15"
+                    >登录</a></li>
+                            </ul>
+
+<!--
+        <button type="button" class="navbar-toggle"
+            data-toggle="collapse" data-target="#navbarXs" data-parent="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <button type="button" class="navbar-toggle search"
+            data-toggle="collapse" data-target="#navbarSearch" data-parent="#navbar">
+            <span class="glyphicon glyphicon-search"></span>
+        </button>
+                <div class="navbar-toggle">
+            <a class="signin" href="http://zuicool.com/sso/signin?_returnUrl=http%3A%2F%2Fzuicool.com%2Fevents%3Fpage%3D52%26per-page%3D15"
+            >登录</a>
+        </div>
+        -->
+        <a class="navbar-brand" href="/"><img src="/images/logo-navbar.png" srcset="/images/logo-navbar-2x.png 2x"></a>
+        <span class="navbar-slogan">报名比赛<br>就上最酷</span>
+    </div>
+
+    <div class="navbar-center collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="http://zuicool.com/events">赛事大全</a></li>
+            <li><a href="http://reg.zuicool.com/">一键报名</a></li>
+            <li><a href="http://zuicool.com/results">成绩查询</a></li>
+            <li><a href="http://zuicool.com/news">资讯</a></li>
+        </ul>
+    </div>
+
+<!--
+    <nav class="navbar-xs collapse" id="navbarXs">
+        <a href="http://zuicool.com/events" class="nav-item">赛事大全</a>
+        <a href="http://reg.zuicool.com/" class="nav-item">一键报名</a>
+        <a href="http://zuicool.com/results" class="nav-item">成绩查询</a>
+        <a href="http://zuicool.com/news" class="nav-item">资讯</a>
+        <div class="nav-item">
+                            <a href="http://zuicool.com/sso/signin?_returnUrl=http%3A%2F%2Fzuicool.com%2Fevents%3Fpage%3D52%26per-page%3D15" class="btn btn-sm btn-default">登录</a>
+                    </div>
+    </nav>
+    <div class="navbar-search collapse" id="navbarSearch">
+        <form role="search">
+            <label class="sr-only" for="navbar-search-input">搜索比赛、目的地、资讯、你的大名…</label>
+            <div class="inner-addon inner-addon-sm inner-addon-left">
+                <span class="glyphicon glyphicon-search"></span>
+                <input type="search" class="form-control input-sm" id="navbar-search-input" placeholder="搜索比赛、目的地、资讯、你的大名…">
+            </div>
+            <ul class="list-inline hot-keywords">
+                <li><a href="#">东京马拉松</a></li>
+                <li><a href="#">无锡</a></li>
+                <li><a href="#">李宁10K</a></li>
+                <li><a href="#">铁人三项</a></li>
+                <li><a href="#">成绩</a></li>
+            </ul>
+        </form>
+    </div>
+-->
+</div>
+</div>
+
+
+<div class="events-narrower-mobile" id="eventsNarrowerMobile">
+
+    <div style="padding: 10px; border-bottom: 1px solid #eee">
+
+        <form action="/events" method="get">            <label class="sr-only" for="header-search-input">搜索比赛</label>
+            <div class="inner-addon inner-addon-sm inner-addon-left">
+                <span class="glyphicon glyphicon-search"></span>
+                <!-- <input type="search" class="form-control input-sm" id="header-search-input" placeholder="搜索比赛"> -->
+
+                <input type="search" id="input-q-sm" class="form-control input-sm" name="q" value="" placeholder="输入关键词、目的地搜索比赛">            </div>
+            <input type="hidden" name="type">            <input type="hidden" name="where">            <input type="hidden" name="when">        </form>    </div>
+
+
+  <ul class="zuicool-filter clearfix">
+    <li><a data-target="zuicoolFilterArea">类型 <i class="glyphicon glyphicon-chevron-down"></i></a></li>
+    <li><a data-target="zuicoolFilterAddress">地点 <i class="glyphicon glyphicon-chevron-down"></i></a></li>
+    <li><a data-target="zuicoolFilterDate">时间 <i class="glyphicon glyphicon-chevron-down"></i></a></li>
+    <!-- <li><a data-target="zuicoolFilterSearch">筛选 <i class="glyphicon glyphicon-chevron-down"></i></a></li> -->
+  </ul>
+
+  <section class="zuicool-filter-container collapse" id="zuicoolFilterArea">
+    <ul class="clearfix">
+
+                        <li><a href="http://zuicool.com/events" class="zuicool-option active">不限</a></li>
+
+                                            <li><a href="http://zuicool.com/events?type=run" class="zuicool-option ">跑步</a></li>
+                                            <li><a href="http://zuicool.com/events?type=trail-run" class="zuicool-option ">越野跑</a></li>
+                                            <li><a href="http://zuicool.com/events?type=triathlon" class="zuicool-option ">铁人三项</a></li>
+                                            <li><a href="http://zuicool.com/events?type=cycling" class="zuicool-option ">骑行</a></li>
+                                            <li><a href="http://zuicool.com/events?type=other" class="zuicool-option ">其它</a></li>
+                        </ul>
+  </section>
+  <section class="zuicool-filter-container collapse" id="zuicoolFilterAddress">
+    <ul class="clearfix">
+                        <li><a href="http://zuicool.com/events" class="active">不限</a></li>
+
+                                            <li><a href="http://zuicool.com/events?where=beijing" class="zuicool-option ">北京</a></li>
+                                            <li><a href="http://zuicool.com/events?where=shanghai" class="zuicool-option ">上海</a></li>
+                                            <li><a href="http://zuicool.com/events?where=jiangzhe" class="zuicool-option ">江浙</a></li>
+                                            <li><a href="http://zuicool.com/events?where=guangshen" class="zuicool-option ">广深</a></li>
+                                            <li><a href="http://zuicool.com/events?where=chengyu" class="zuicool-option ">成渝</a></li>
+                                            <li><a href="http://zuicool.com/events?where=hkgmac" class="zuicool-option ">港澳</a></li>
+                                            <li><a href="http://zuicool.com/events?where=taiwan" class="zuicool-option ">台湾</a></li>
+                                            <li><a href="http://zuicool.com/events?where=jpkr" class="zuicool-option ">日韩朝</a></li>
+                                            <li><a href="http://zuicool.com/events?where=seasia" class="zuicool-option ">东南亚</a></li>
+                                            <li><a href="http://zuicool.com/events?where=us" class="zuicool-option ">美国</a></li>
+                                            <li><a href="http://zuicool.com/events?where=overseas" class="zuicool-option ">海外</a></li>
+                        </ul>
+  </section>
+  <section class="zuicool-filter-container collapse" id="zuicoolFilterDate">
+    <ul class="clearfix">
+
+                        <li><a href="http://zuicool.com/events" class="zuicool-option active">不限</a></li>
+
+                                            <li><a href="http://zuicool.com/events?when=1" class="zuicool-option ">1月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=2" class="zuicool-option ">2月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=3" class="zuicool-option ">3月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=4" class="zuicool-option ">4月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=5" class="zuicool-option ">5月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=6" class="zuicool-option ">6月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=7" class="zuicool-option ">7月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=8" class="zuicool-option ">8月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=9" class="zuicool-option ">9月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=10" class="zuicool-option ">10月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=11" class="zuicool-option ">11月</a></li>
+                                            <li><a href="http://zuicool.com/events?when=12" class="zuicool-option ">12月</a></li>
+                    
+    </ul>
+  </section>
+<!--   <section class="zuicool-filter-container collapse" id="zuicoolFilterSearch">
+    Whatever
+  </section>
+ --></div>
+
+<div class="container">
+
+    <div class="events-narrower">
+        <div class="cond">
+            <div class="cond-title">
+                类型
+            </div>
+            <div class="cond-values">
+                <div class="values-all">
+                    <ul class="list">
+                        <li class="active"><a href="http://zuicool.com/events">不限</a></li>
+                    </ul>
+                </div>
+                <div class="values-list">
+                    <ul class="list">
+                                            <li class=""><a href="http://zuicool.com/events?type=run">跑步</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?type=trail-run">越野跑</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?type=triathlon">铁人三项</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?type=cycling">骑行</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?type=other">其它</a></li>
+                                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cond">
+            <div class="cond-title">
+                地点
+            </div>
+            <div class="cond-values">
+<!--
+                <div class="more-link">
+                    <a href="#">更多 <span class="glyphicon glyphicon-menu-down"></span></a>
+                </div>
+-->
+                <div class="values-all">
+                    <ul class="list">
+                        <li class="active"><a href="http://zuicool.com/events">不限</a></li>
+                    </ul>
+                </div>
+                <div class="values-list">
+                    <ul class="list">
+                                            <li class=""><a href="http://zuicool.com/events?where=beijing">北京</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?where=shanghai">上海</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?where=jiangzhe">江浙</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?where=guangshen">广深</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?where=chengyu">成渝</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?where=hkgmac">港澳</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?where=taiwan">台湾</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?where=jpkr">日韩朝</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?where=seasia">东南亚</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?where=us">美国</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?where=overseas">海外</a></li>
+                                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cond">
+            <div class="cond-title">
+                时间
+            </div>
+            <div class="cond-values">
+<!--
+                <div class="more-link">
+                    <a href="#">更多 <span class="glyphicon glyphicon-menu-down"></span></a>
+                </div>
+ -->
+                <div class="values-all">
+                    <ul class="list">
+                        <li class="active"><a href="http://zuicool.com/events">不限</a></li>
+                    </ul>
+                </div>
+                <div class="values-list">
+                    <ul class="list">
+                                            <li class=""><a href="http://zuicool.com/events?when=1">1月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=2">2月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=3">3月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=4">4月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=5">5月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=6">6月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=7">7月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=8">8月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=9">9月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=10">10月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=11">11月</a></li>
+                                            <li class=""><a href="http://zuicool.com/events?when=12">12月</a></li>
+                                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="events-narrower-nav">
+        <form class="search-form form-inline" action="/events" method="get" style="float: right; margin: -6px 0;">            <div class="input-group">
+                <input type="text" id="input-q" class="form-control input-sm" name="q" value="" placeholder="输入关键词" style="width: 160px">                <span class="input-group-btn"><button type="submit" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-search"></span></button></span>
+            </div>
+            <input type="hidden" name="type">            <input type="hidden" name="where">            <input type="hidden" name="when">        </form>        <ul class="list list-inline">
+            <li style="margin-right: 20px">
+                &nbsp;
+            </li>
+        </ul>
+    </div>
+
+    <div class="events-list">
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/1413/logo-1" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/aishang-hangzhou-season-trail-fall"><h4 class="name">爱尚•杭州四季越野（秋季赛）</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            浙江 杭州                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        2 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/1476/logo-1" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/liaoning-benxi-international-outdoor-challenge"><h4 class="name">“五彩辽宁”国际极限越野挑战赛</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            辽宁 本溪                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        5 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <a href="http://zuicool.com/event/fangshan-cross-country-barrier-challenge"><h4 class="name">中国·房山世界地质公园京津冀 越野障碍跑挑战赛</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            北京 房山 张坊镇四渡景区                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        1 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/2046/logo-1" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/wuhai-half-marathon"><h4 class="name">乌海国际半程马拉松赛</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            内蒙古 乌海                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        1 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/1892/logo-1" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/beijing-xishan-moutain-marathon-autumn"><h4 class="name">北京西山山地马拉松暨秋季城市越野赛</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            北京 海淀 西山森林公园                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        4 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/1990/logo-1" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/lining-10k-lanzhou"><h4 class="name">优悦·李宁10公里路跑联赛 - 兰州站</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            甘肃 兰州                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        1 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/10988015/logo-1471194336" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/karamay-international-marathon"><h4 class="name">克拉玛依国际马拉松赛</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            新疆 克拉玛依                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        4 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/2307/logo-1" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/hunchun-tumen-river-international-maraton"><h4 class="name">2016珲春图们江国际马拉松旅游节</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            黑龙江 珲春市 西出口广场                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        3 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/2357/logo-1" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/jiaohe-half-marathon"><h4 class="name">蓝湾国际•2016吉林蛟河红叶谷半程马拉松邀请赛</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            吉林省 吉林市 蛟河红叶谷景区                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        2 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <a href="http://zuicool.com/event/gaomi-marathon"><h4 class="name">“高粱红了”高密国际马拉松赛</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            山东 潍坊 高密                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        3 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/3433056/logo-1469867600" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/salomon-city-trail-guangzhou-shaojiwo-double-team"><h4 class="name">Salomon城市越野赛广州站 —「筲箕窝双人越野赛」</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            广东 广州 筲箕窝水库大坝旁颐和山庄                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        1 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/2273625/logo-1471697006" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/mentougou-100k"><h4 class="name">门百汇跑两项赛</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            北京 门头沟                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        1 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <a href="http://zuicool.com/event/benxi-marathon"><h4 class="name">“智慧山水城”（本溪）国际马拉松</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            辽宁 本溪                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                                                </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/14314895/logo-1470738231" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/the-forest-run-mt-changbai"><h4 class="name">中国森林马拉松系列赛·长白山站</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            吉林 延边市 安图县二道白河镇池北区                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        4 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="event">
+            <div class="col-xs-12">
+                <div class="event-date">
+                    <div class="month">
+                        9月                    </div>
+                    <div class="dom">
+                        25                    </div>
+                </div>
+                <div class="event-body">
+                                        <div class="logo">
+                        <img src="http://zc3-hasone.bkt.zuicool.com/event/11001222/logo-1471202085" class="logo">
+                    </div>
+                                        <a href="http://zuicool.com/event/lianyungang-jiagu-mountain-marathon"><h4 class="name">连云港夹谷山马拉松</h4></a>
+                    <div class="info">
+                        <p>
+                            2016-9-25                            &middot;
+                            江苏 连云港 赣榆区 夹谷山风景区                        </p>
+                    </div>
+                    <div class="meta">
+                        <p>
+                        2 场成绩                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <nav class="pagination-wrap">
+            <ul class="pagination pagination-sm hidden-xs"><li class="prev"><a href="/events?page=51&amp;per-page=15" data-page="50">上一页</a></li>
+<li><a href="/events?page=47&amp;per-page=15" data-page="46">47</a></li>
+<li><a href="/events?page=48&amp;per-page=15" data-page="47">48</a></li>
+<li><a href="/events?page=49&amp;per-page=15" data-page="48">49</a></li>
+<li><a href="/events?page=50&amp;per-page=15" data-page="49">50</a></li>
+<li><a href="/events?page=51&amp;per-page=15" data-page="50">51</a></li>
+<li class="active"><a href="/events?page=52&amp;per-page=15" data-page="51">52</a></li>
+<li><a href="/events?page=53&amp;per-page=15" data-page="52">53</a></li>
+<li><a href="/events?page=54&amp;per-page=15" data-page="53">54</a></li>
+<li><a href="/events?page=55&amp;per-page=15" data-page="54">55</a></li>
+<li><a href="/events?page=56&amp;per-page=15" data-page="55">56</a></li>
+<li class="next"><a href="/events?page=53&amp;per-page=15" data-page="52">下一页</a></li></ul>        </nav>
+        <ul class="pager visible-xs-block">
+                        <li class="previous"><a href="http://zuicool.com/events?page=51&per-page=15">&larr; 上一页</a></li>
+                                    <li class="next"><a href="http://zuicool.com/events?page=53&per-page=15">下一页 &rarr;</a></li>
+                    </ul>
+        </div>
+
+</div>
+
+<footer class="footer">
+	<div class="container">
+		<p>
+			<span class="pull-right text-right">
+				<a href="mailto:im@zuicool.com">联系我们</a>
+			</span>
+			&copy; <a href="http://zuicool.com/?utm_source=footer&hmsr=footer">最酷 ZUICOOL</a> - 报名比赛 就上最酷
+		</p>
+	</div>
+</footer>
+<script src="//cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+<script src="/assets/3d5afae1/js/bootstrap.js"></script>
+<script src="/assets/7d089607/yii.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+
+var toggleFilter = function(filterTrigger) {
+  var $trigger = $(filterTrigger);
+  var closedIconClass = 'glyphicon-chevron-down';
+  var opendIconClass = 'glyphicon-chevron-up';
+  $('#eventsNarrowerMobile .zuicool-filter a i').removeClass(opendIconClass).addClass(closedIconClass);
+  if ($trigger.hasClass('opened')) {
+    $('#' + $(filterTrigger).data('target')).addClass('collapse');
+    $trigger.removeClass('opened');
+    $trigger.find('i').removeClass(opendIconClass).addClass(closedIconClass);
+  } else {
+    $('#eventsNarrowerMobile .zuicool-filter a').removeClass('opened');
+    $('#eventsNarrowerMobile section').addClass('collapse');
+    $('#' + $trigger.data('target')).removeClass('collapse');
+    $trigger.find('i').removeClass(closedIconClass).addClass(opendIconClass);
+    $trigger.addClass('opened');
+  }
+
+}
+
+$('.events-narrower-mobile ul li a').bind('click', function() {
+  var $this = $(this);
+  toggleFilter($this);
+})
+
+
+$('#navbarXs').on('show.bs.collapse', function () {
+    $('#navbarSearch').collapse('hide');
+});
+$('#navbarSearch').on('show.bs.collapse', function () {
+    $('#navbarXs').collapse('hide');
+});
+
+});</script><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?53a1a5fdc5a67e1635ac522e3432f6c5";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

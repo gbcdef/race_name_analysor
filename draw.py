@@ -4,7 +4,7 @@ import random
 import numpy as np
 
 names = []
-with open('race_name.csv', 'rb') as f:
+with open('dist/race_name.csv', 'rb') as f:
 	reader = csv.reader(f)
 	for row in reader:
 		names = row

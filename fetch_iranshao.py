@@ -7,8 +7,8 @@ import os
 # start_url = 'http://iranshao.com/bundled_races?page=1&sort=time'
 # start_url = 'http://iranshao.com/bundled_races?month=all&page=1'
 
-if not os.path.exists('html'):
-	os.makedirs('html')
+if not os.path.exists('html_iranshao'):
+	os.makedirs('html_iranshao')
 
 # r = requests.get(start_url)
 # while r.status_code != 200:
